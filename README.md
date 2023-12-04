@@ -19,17 +19,15 @@ My initial hypothesis is that
 
 | Feature | Definition |
 |:--------|:-----------|
-|payment_type_id|
-|internet_service_type_id|
-|contract_type_id|
-|customer_id|
-|gender|
+|customer_id|Unique identifier for each customer|
+|gender|The gender of the customer (male or female)|
 |senior_citizen|
 |partner|
 |dependents|
 |tenure|
 |phone_service|
 |multiple_lines|
+|internet_service|
 |online_security|
 |online_backup|
 |device_protection|
