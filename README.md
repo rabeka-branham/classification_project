@@ -1,21 +1,21 @@
-# **Project Description**
+# **Telco Churn Analysis**
+
+## **Project Description**
 Telco, a telecommunications service provider, currently faces about a 25% likelihood that their customers will leave their company. 
 
-# **Project Goals**
+## **Project Goals**
 * Find out what is driving the customers at Telco to leave (churn).
 * Build a ML model using classification algorithms to predict if a customer will churn
 * This information can be use to 
 
-Present your process and findings to the lead data scientist
-
-# **Initial Thoughts** 
-* My initial hypothesis is that the following drivers affect whether or not a customer will churn greater than the other drivers:
+## **Initial Thoughts** 
+* My initial hypothesis is that the following features affect whether or not a customer will churn greater than the others:
     * **Tenure**: The length of time a customer has been with the service is a crucial factor. Generally, longer tenure is associated with lower churn rates.
     * **Monthly Charges**: Higher monthly charges may increase the likelihood of churn, especially if customers perceive the costs as too high relative to the value they receive.
     * **Contract Type**: Customers with month-to-month contracts are typically more likely to churn than those with longer-term contracts (e.g., annual contracts).
 
 
-# **Data Dictionary**
+## **Data Dictionary**
 
 | Feature | Definition |
 |:--------|:-----------|
@@ -42,7 +42,7 @@ Present your process and findings to the lead data scientist
 |internet_service_type|Type of internet service subscribed by the customer (DSL, fiber optic)|
 |payment_type|The method of payment chosen by the customer (bank transfer, credit card, electronic check, mailed check)|
 
-# **Project Plan** 
+## **Project Plan** 
 * **Aquire** data from MySQL
 
 * **Prepare**
@@ -55,7 +55,7 @@ Present your process and findings to the lead data scientist
         * changed values in the `senior_citizen` column from '1 or 0' to 'Yes or No'
         * filled null values in the `internet_service_type` with 'No internet service' based off of comparison to the `internet_service` column
         * changed values in the `total_charges` from an object to a float
-    * Split Data into:
+    * Split Data into 3 new dataframes:
         * Train - 60% of the original dataframe
         * Validate - 20% of the original dataframe
         * Test - 20% of the original dataframe
@@ -64,7 +64,7 @@ Present your process and findings to the lead data scientist
 * Model
 * Evaluation
 
-# **Steps to Reproduce**
+## **Steps to Reproduce**
 1. Clone this repo.
 2. Create an `env.py` file that follows the "sample `env.py` file" format below.
 3. Save your `env.py` file into the cloned repo.
