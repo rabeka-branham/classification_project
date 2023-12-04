@@ -55,14 +55,15 @@ Telco, a telecommunications service provider, currently faces about a 25% likeli
         * changed values in the `senior_citizen` column from '1 or 0' to 'Yes or No'
         * filled null values in the `internet_service_type` with 'No internet service' based off of comparison to the `internet_service` column
         * changed values in the `total_charges` from an object to a float
-    * Split Data into 3 new dataframes:
+    * Split data into 3 new dataframes:
         * Train - 60% of the original dataframe
         * Validate - 20% of the original dataframe
         * Test - 20% of the original dataframe
-* Explore
-* Preprocessing
-* Model
-* Evaluation
+
+* **Explore**
+* **Preprocessing**
+* **Model**
+* **Evaluation**
 
 ## **Steps to Reproduce**
 1. Clone this repo.
@@ -70,7 +71,7 @@ Telco, a telecommunications service provider, currently faces about a 25% likeli
 3. Save your `env.py` file into the cloned repo.
 4. Run notebook.
 
-**sample** `env.py` **file:**<br>
+**<ins>sample** `env.py` **file:</ins>**<br>
 host = 'data.codeup.com'<br>
 username = 'sample_username'<br>
 password = 'sample_password'<br>
