@@ -54,7 +54,7 @@ My initial hypothesis is that
 
 # **Steps to Reproduce**
 1. Clone this repo.
-2. Create an `env.py` file that follows the format below.
+2. Create an `env.py` file that follows the "sample `env.py` file" format below.
 3. Save your `env.py` file into the cloned repo.
 4. Run notebook.
 
