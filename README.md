@@ -20,7 +20,7 @@ My initial hypothesis is that
 | Feature | Definition |
 |:--------|:-----------|
 |customer_id|Unique identifier for each customer|
-|gender|The gender of the customer (male or female)|
+|gender|The gender of the customer (male,female)|
 |senior_citizen|Indicates whether the customer is a senior citizen|
 |partner|Indicates whether the customer has a partner|
 |dependents|Indicates whether the customer has dependents|
@@ -30,17 +30,17 @@ My initial hypothesis is that
 |internet_service|Indicates whether the customer subscribes to internet service|
 |online_security|Indicates whether the customer has online security features|
 |online_backup|Indicates whether the customer has online backup features|
-|device_protection|
-|tech_support|
-|streaming_tv|
-|streaming_movies|
-|paperless_billing|
-|monthly_charges|
-|total_charges|
-|churn|
-|contract_type|
-|internet_service_type|
-|payment_type|
+|device_protection|Indicates whether the customer has device protection features|
+|tech_support|Indicates whether the customer has technical support services|
+|streaming_tv|Indicates whether the customer subscribes to streaming TV services|
+|streaming_movies|Indicates whether the customer subscribes to streaming movie services|
+|paperless_billing|Indicates whether the customer has opted for paperless billing|
+|monthly_charges|The amount charged to the customer on a monthly basis|
+|total_charges|The total charges incurred by the customer|
+|churn|Indicates whether the customer has churned|
+|contract_type|Type of contract subscribed by the customer (month-to-month, one-year, two-year)|
+|internet_service_type|Type of internet service subscribed by the customer (DSL, fiber optic)|
+|payment_type|The method of payment chosen by the customer (bank transfer, credit card, electronic check, mailed check)|
 
 # **Project Plan** 
 * Acquire
