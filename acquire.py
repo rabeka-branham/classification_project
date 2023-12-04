@@ -19,10 +19,8 @@ def acquire_data():
         '''
     
     if os.path.exists(filename):
-        print('File exists - reading CSV file')
         df = pd.read_csv(filename, index_col=0)
     else:
-        print('File does not exist - creating CSV file')
         df = pd.read_sql(query,url)
         df.to_csv(filename)
     

@@ -9,6 +9,7 @@ def prepare_data(dataframe):
     df.internet_service_type = df.internet_service_type.fillna('No internet service')
     df.senior_citizen = np.where(df['senior_citizen'] == 1, 'Yes', 'No')
     df.loc[:,'internet_service'] = np.where(df['online_security'] == 'No internet service', 'No', 'Yes')
+    df.churn = np.where(df['churn'] == 'Yes',1,0)
     df.insert(8, 'internet_service', df.pop('internet_service')) 
     df.total_charges = df.total_charges.replace(' ','0.0').astype('float')
     return df
