@@ -21,15 +21,15 @@ My initial hypothesis is that
 |:--------|:-----------|
 |customer_id|Unique identifier for each customer|
 |gender|The gender of the customer (male or female)|
-|senior_citizen|
-|partner|
-|dependents|
-|tenure|
-|phone_service|
-|multiple_lines|
-|internet_service|
-|online_security|
-|online_backup|
+|senior_citizen|Indicates whether the customer is a senior citizen|
+|partner|Indicates whether the customer has a partner|
+|dependents|Indicates whether the customer has dependents|
+|tenure|The duration in months that a customer has been with the service provider|
+|phone_service|Indicates whether the customer subscribes to phone service|
+|multiple_lines|Indicates whether the customer has multiple phone lines|
+|internet_service|Indicates whether the customer subscribes to internet service|
+|online_security|Indicates whether the customer has online security features|
+|online_backup|Indicates whether the customer has online backup features|
 |device_protection|
 |tech_support|
 |streaming_tv|
