@@ -9,7 +9,7 @@ Telco, a telecommunications service provider, currently faces about a 25% likeli
 Present your process and findings to the lead data scientist
 
 # **Initial Thoughts** 
-My initial hypothesis is that 
+* My initial hypothesis is that the following drivers affect whether or not a customer will churn greater than the other drivers:
     * **Tenure**: The length of time a customer has been with the service is a crucial factor. Generally, longer tenure is associated with lower churn rates.
     * **Monthly Charges**: Higher monthly charges may increase the likelihood of churn, especially if customers perceive the costs as too high relative to the value they receive.
     * **Contract Type**: Customers with month-to-month contracts are typically more likely to churn than those with longer-term contracts (e.g., annual contracts).
@@ -51,11 +51,14 @@ My initial hypothesis is that
         * `internet_service_type_id` *- data exists in the `internet_service_type` column*
         * `contract_type_id` *- data exists in the `contract_type` column*
     * Create `internet_service` column to indicate whether a customer subscribes to internet service
-    * Correct values
+    * Correct values & datatypes
+        * changed values in the `senior_citizen` column from '1 or 0' to 'Yes or No'
         * filled null values in the `internet_service_type` with 'No internet service' based off of comparison to the `internet_service` column
-    *
- 
-
+        * changed values in the `total_charges` from an object to a float
+    * Split Data into:
+        * Train - 60% of the original dataframe
+        * Validate - 20% of the original dataframe
+        * Test - 20% of the original dataframe
 * Explore
 * Preprocessing
 * Model
