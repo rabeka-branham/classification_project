@@ -43,16 +43,18 @@ My initial hypothesis is that
 |payment_type|The method of payment chosen by the customer (bank transfer, credit card, electronic check, mailed check)|
 
 # **Project Plan** 
-* Aquire data from MySQL
+* **Aquire** data from MySQL
 
-* Prepare
+* **Prepare**
     * Drop duplicate columns
-        * 'payment_type_id' *- data exists in the 'payment_type' column*
-        * 'internet_service_type_id' *- data exists in the 'internet_service_type' column*
-        * 'contract_type_id' *- data exists in the 'contract_type' column*
-    * Fill null values
-        * filled null values in the 'internet_service_type'
-    * Create 'internet_service' column to indicate whether a customer subscribes to internet service
+        * `payment_type_id` *- data exists in the `payment_type` column*
+        * `internet_service_type_id` *- data exists in the `internet_service_type` column*
+        * `contract_type_id` *- data exists in the `contract_type` column*
+    * Create `internet_service` column to indicate whether a customer subscribes to internet service
+    * Correct values
+        * filled null values in the `internet_service_type` with 'No internet service' based off of comparison to the `internet_service` column
+    *
+ 
 
 * Explore
 * Preprocessing
