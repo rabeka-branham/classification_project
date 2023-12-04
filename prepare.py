@@ -12,6 +12,7 @@ def prepare_data(dataframe):
     df.churn = np.where(df['churn'] == 'Yes',1,0)
     df.insert(8, 'internet_service', df.pop('internet_service')) 
     df.total_charges = df.total_charges.replace(' ','0.0').astype('float')
+    df = df.set_index('customer_id')
     return df
 
 def split_data(dataframe, col):

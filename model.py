@@ -1,6 +1,6 @@
-def preprocess_titanic(train_df, validate_df, test_df):
+def preprocess_titanic(train, validate, test):
     encoded_df = []
-    for df in [train_df, validate_df, test_df]:
+    for df in [train, validate, test]:
         df.pclass = df.pclass.astype(int)
         df_encoded_columns = pd.get_dummies(df[['embark_town', 'sex']],
               drop_first=True).astype(int)
