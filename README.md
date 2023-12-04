@@ -67,11 +67,11 @@ Telco, a telecommunications service provider, currently faces about a 25% likeli
 
 ## **Steps to Reproduce**
 1. Clone this repo.
-2. Create an `env.py` file that follows the "sample `env.py` file" format below.
+2. Create an `env.py` file that follows the "sample env.py file" format below.
 3. Save your `env.py` file into the cloned repo.
 4. Run notebook.
 
-**<ins>sample** `env.py` **file:</ins>**<br>
+**<ins>sample env.py file:</ins>**<br>
 host = 'data.codeup.com'<br>
 username = 'sample_username'<br>
 password = 'sample_password'<br>
