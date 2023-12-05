@@ -4,13 +4,18 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 
-def pie_churn(train,target):
-    values  = [train[target].mean(),(1-(train[target].mean()))]
+def pie_churn(df):
+    values  = [df.churn.mean(),(1-(df.churn.mean()))]
     labels = ['Churned','Active'] 
     plt.figure(figsize=(6, 6))
     plt.pie(values, labels=labels, autopct='%.2f%%', colors=['lightsalmon','lightseagreen'])
     plt.title('The "Churn vs Active" Rate of Customers')
     plt.show()
+    
+def distribution_plt(df, variable):
+    sns.histplot(df[variable],color='lightseagreen')
+    plt.title(f'Distribution of {variable.capitalize()}')
+    plt.show();
     
 def bar_tenure(train):
     values = [train.tenure[(train.churn == True)].mean(),train.tenure[(train.churn == False)].mean()]
@@ -47,7 +52,7 @@ def pie_churn_by_contract_type(train):
     ax3.pie(values, labels=labels, autopct='%.0f%%', colors=['lightsalmon','lightseagreen'])
     ax3.title.set_text('Two year')
     
-    plt.title('Churn vs Active by Contract Type')
+    plt.suptitle('Churn vs Active by Contract Type')
     plt.tight_layout
     plt.show()
     
@@ -55,6 +60,8 @@ def chi_squared_contract_type(train):
     observed = pd.crosstab(train.contract_type,train.churn)
     α = .05
     chi2, p, dof, expected = stats.chi2_contingency(observed)
+    
+    print(f'p-value: {p:4f}')
 
     if p < α:
         print('There IS a relationship between contract_type & churn rate!')
@@ -67,6 +74,8 @@ def mann_whitney_tenure(train):
     t,p = stats.mannwhitneyu(churned.tenure, active.tenure)
     α = 0.05
 
+    print(f'p-value: {p:4f}')
+    
     if p < α:
         print('There IS a relationship between tenure & churn rate!')
     else:
@@ -77,6 +86,8 @@ def mann_whitney_monthly_charges(train):
     active = train[train.churn == 0]
     t,p = stats.mannwhitneyu(churned.monthly_charges, active.monthly_charges)
     α = 0.05
+    
+    print(f'p-value: {p:4f}')
 
     if p < α:
         print('There IS a relationship between monthly_charges & churn rate!')

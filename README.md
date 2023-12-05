@@ -4,9 +4,8 @@
 Telco, a telecommunications service provider, currently faces about a 25% likelihood that their customers will leave their company. 
 
 ## **Project Goals**
-* Find out what is driving the customers at Telco to leave (churn).
-* Build a ML model using classification algorithms to predict if a customer will churn
-* This information can be use to 
+* Find out what is causing the customer churn at Telco.
+* Construct a ML model using classification algorithms that accurately predicts customer churn.
 
 ## **Initial Thoughts** 
 * My initial hypothesis is that the following features affect whether or not a customer will churn greater than the others:
