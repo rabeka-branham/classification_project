@@ -17,7 +17,6 @@ def acquire_data():
         join internet_service_types using (internet_service_type_id)
         join payment_types using (payment_type_id);
         '''
-    
     if os.path.exists(filename):
         df = pd.read_csv(filename, index_col=0)
     else:
