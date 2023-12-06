@@ -72,23 +72,27 @@ This data science project aims to identify the root causes of customer departure
     * What impact does contract type have on the churn rate?
         * Exploring the impact of contract type on churn rate, a chi^2 test indicates a relationship. Illustrated through a pie chart, customers with month-to-month contracts show a significantly higher churn rate compared to those with longer-term contracts.
 
-Confirmed influences of tenure, monthly charges, and contract types on customer churn will guide predictive model development.
+> Confirmed influences of tenure, monthly charges, and contract types on customer churn will guide predictive model development.
     
-    
-    
+* **Modeling**
+    * Preprocessing
+        * In the model phase, we preprocessed data, handling categorical columns and ensuring data readiness.
+    * Baseline accuracy, obtained by subtracting the mean of 'churn' from 1, is 73.47%.
+    * Model Selection
+        * We explored multiple models: Decision Tree, Random Forest, KNN, and Logistic Regression. 
+        * Logistic Regression marginally outperformed other models and was selected as our final model for test data evaluation.
+    * Model Evaluation
+        * Our final model achieved an accuracy of 79.77% on the test data, surpassing the baseline accuracy.
+* **Conclusion**
+    * Recommendations
+        * Customer Loyalty Programs: Encourage long-term customers to stay with the company.
+        * Promotions for Longer Contracts: Offer discounts for customers willing to commit to one-year or two-year contracts.
+    * Future Steps
+        * The next step would be to continue monitoring customer churn and model performance, updating as new data becomes available.
+
+> In conclusion, our Telco Churn Analysis project has provided valuable insights into the factors influencing customer churn. The Logistic Regression model offers a practical tool for identifying and addressing churn risk. By implementing recommendations and staying proactive with continuous monitoring, we can strengthen customer retention and contribute to the long-term success of this company.
 
 
-
-
-
-
-
-
-
-
-* **Preprocessing**
-* **Model**
-* **Evaluation**
 
 ## **Steps to Reproduce**
 1. Clone this repo.
