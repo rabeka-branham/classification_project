@@ -9,7 +9,8 @@ def acquire_data():
     It checks if a local CSV file ('telco.csv') exists. If the file exists, it reads the data from the file into a DataFrame.
     If the file does not exist, it queries the MySQL database using the specified SQL query, saves the result to the CSV file, and returns the DataFrame.
 
-    Returns: DataFrame containing the acquired data.
+    Returns: 
+    pd.DataFrame: DataFrame containing the acquired data.
     '''
     # Filename for the local CSV file
     filename = 'telco.csv'

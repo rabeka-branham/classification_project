@@ -12,6 +12,17 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 
 def preprocess(train, validate, test):
+    """
+    Preprocess the data by encoding categorical columns using one-hot encoding.
+
+    Parameters:
+    - train (pd.DataFrame): Training data.
+    - validate (pd.DataFrame): Validation data.
+    - test (pd.DataFrame): Testing data.
+
+    Returns:
+    List of preprocessed DataFrames [train_encoded, validate_encoded, test_encoded].
+    """
     encoded_df = []
     
     for df in [train, validate, test]:
@@ -30,6 +41,17 @@ def preprocess(train, validate, test):
     return encoded_df
 
 def decision_tree(train, validate, test):
+    """
+    Train a Decision Tree classifier and evaluate its performance on train, validate, and test sets.
+
+    Parameters:
+    - train (pd.DataFrame): Training data.
+    - validate (pd.DataFrame): Validation data.
+    - test (pd.DataFrame): Testing data.
+
+    Returns:
+    Test accuracy.
+    """
     X_train = train.drop(columns=['churn'])
     y_train = train.churn
 
@@ -70,6 +92,17 @@ def decision_tree(train, validate, test):
     return test_acc
       
 def random_forest(train, validate, test):
+    """
+    Train a Random Forest classifier and evaluate its performance on train, validate, and test sets.
+
+    Parameters:
+    - train (pd.DataFrame): Training data.
+    - validate (pd.DataFrame): Validation data.
+    - test (pd.DataFrame): Testing data.
+
+    Returns:
+    Test accuracy.
+    """
     X_train = train.drop(columns=['churn'])
     y_train = train.churn
 
@@ -110,6 +143,17 @@ def random_forest(train, validate, test):
     return test_acc
     
 def knn(train, validate, test):
+    """
+    Train a K-Nearest Neighbors classifier and evaluate its performance on train, validate, and test sets.
+
+    Parameters:
+    - train (pd.DataFrame): Training data.
+    - validate (pd.DataFrame): Validation data.
+    - test (pd.DataFrame): Testing data.
+
+    Returns:
+    Test accuracy.
+    """
     X_train = train.drop(columns=['churn'])
     y_train = train.churn
 
@@ -150,6 +194,17 @@ def knn(train, validate, test):
     return test_acc
 
 def logistic_regression(train, validate, test):
+    """
+    Train a Logistic Regression classifier and evaluate its performance on train, validate, and test sets.
+
+    Parameters:
+    - train (pd.DataFrame): Training data.
+    - validate (pd.DataFrame): Validation data.
+    - test (pd.DataFrame): Testing data.
+
+    Returns:
+    Test accuracy.
+    """
     X_train = train.drop(columns=['churn'])
     y_train = train.churn
 
