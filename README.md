@@ -13,7 +13,6 @@ This data science project aims to identify the root causes of customer departure
     * **Monthly Charges**
     * **Contract Type**
 
-
 ## **Data Dictionary**
 
 | Feature | Definition |
@@ -71,8 +70,7 @@ This data science project aims to identify the root causes of customer departure
         * For the correlation between monthly charges and churn rate, a similar approach with a Mann-Whitney test suggests a relationship. The bar chart visualization reveals that active customers tend to have lower monthly charges.
     * What impact does contract type have on the churn rate?
         * Exploring the impact of contract type on churn rate, a chi^2 test indicates a relationship. Illustrated through a pie chart, customers with month-to-month contracts show a significantly higher churn rate compared to those with longer-term contracts.
-
-> Confirmed influences of tenure, monthly charges, and contract types on customer churn will guide predictive model development.
+    * Confirmed influences of tenure, monthly charges, and contract types on customer churn will guide predictive model development.
     
 * **Modeling**
     * Preprocessing
@@ -89,10 +87,7 @@ This data science project aims to identify the root causes of customer departure
         * Promotions for Longer Contracts: Offer discounts for customers willing to commit to one-year or two-year contracts.
     * Future Steps
         * The next step would be to continue monitoring customer churn and model performance, updating as new data becomes available.
-
-> In conclusion, our Telco Churn Analysis project has provided valuable insights into the factors influencing customer churn. The Logistic Regression model offers a practical tool for identifying and addressing churn risk. By implementing recommendations and staying proactive with continuous monitoring, we can strengthen customer retention and contribute to the long-term success of this company.
-
-
+    * In conclusion, our Telco Churn Analysis project has provided valuable insights into the factors influencing customer churn. The Logistic Regression model offers a practical tool for identifying and addressing churn risk. By implementing recommendations and staying proactive with continuous monitoring, we can strengthen customer retention and contribute to the long-term success of this company.
 
 ## **Steps to Reproduce**
 1. Clone this repo.
@@ -107,6 +102,3 @@ password = 'sample_password'<br>
 
 def get_db_url(database_name, host_name=host, password=password, username=username):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;return f'mysql+pymysql://{username}:{password}@{host_name}/{database_name}'
-
-
-key findings, recommendations, and takeaways
