@@ -1,7 +1,7 @@
 # **Telco Churn Analysis**
 
 ## **Project Description**
-Telco, a telecommunications service provider, currently faces about a 25% likelihood that their customers will leave their company. 
+This data science project aims to identify the root causes of customer departures and develop a predictive model to assist in mitigating churn risk.
 
 ## **Project Goals**
 * Find out what is causing the customer churn at Telco.
@@ -9,9 +9,9 @@ Telco, a telecommunications service provider, currently faces about a 25% likeli
 
 ## **Initial Thoughts** 
 * My initial hypothesis is that the following features affect whether or not a customer will churn greater than the others:
-    * **Tenure**: The length of time a customer has been with the service is a crucial factor. Generally, longer tenure is associated with lower churn rates.
-    * **Monthly Charges**: Higher monthly charges may increase the likelihood of churn, especially if customers perceive the costs as too high relative to the value they receive.
-    * **Contract Type**: Customers with month-to-month contracts are typically more likely to churn than those with longer-term contracts (e.g., annual contracts).
+    * **Tenure**
+    * **Monthly Charges**
+    * **Contract Type**
 
 
 ## **Data Dictionary**
@@ -42,24 +42,50 @@ Telco, a telecommunications service provider, currently faces about a 25% likeli
 |payment_type|The method of payment chosen by the customer (bank transfer, credit card, electronic check, mailed check)|
 
 ## **Project Plan** 
-* **Aquire** data from MySQL
+* **Aquire**
+    * In the Acquire phase, we obtained the data from the Codeup MySQL database `telco_churn`.
+    * The dataset is comprised of 7,043 rows and 22 columns.
+    * Every row corresponds to a distinct Telco customer & each column signifies a specific customer attribute.
 
 * **Prepare**
-    * Drop duplicate columns
-        * `payment_type_id` *- data exists in the `payment_type` column*
-        * `internet_service_type_id` *- data exists in the `internet_service_type` column*
-        * `contract_type_id` *- data exists in the `contract_type` column*
-    * Create `internet_service` column to indicate whether a customer subscribes to internet service
-    * Correct values & datatypes
-        * changed values in the `senior_citizen` column from '1 or 0' to 'Yes or No'
-        * filled null values in the `internet_service_type` with 'No internet service' based off of comparison to the `internet_service` column
-        * changed values in the `total_charges` from an object to a float
-    * Split data into 3 new dataframes:
-        * Train - 60% of the original dataframe
-        * Validate - 20% of the original dataframe
-        * Test - 20% of the original dataframe
+    * Remove duplicate columns (`payment_type_id`, `internet_service_type_id`, `contract_type_id`) as the same data is available elsewhere.
+    * Introduce `internet_service` column to signify customer subscription to internet service.
+    * Adjust values and datatypes:
+        * Convert `senior_citizen` values from '1 or 0' to 'Yes or No'.
+        * Convert `churn values` from 'Yes or No' to '1 or 0'.
+        * Fill null values in `internet_service_type` with 'No internet service'.
+        * Convert `total_charges` values to float.
+    * Set the index to `customer_id` for unique identification.
+    * Split data into three dataframes based on `churn`:
+        * Train (60% of the original dataframe)
+        * Validate (20% of the original dataframe)
+        * Test (20% of the original dataframe)
+    * Retain all data points; no outliers have been removed.
 
 * **Explore**
+    * How often are customers churning?
+        * For the question "How often do customers churn?", we found a churn rate of 26.53% based on our pie chart analysis of the training data.
+    * What is the influence of tenure on the churn rate?
+        * Addressing the influence of tenure on the churn rate, we conducted a Mann-Whitney test, revealing a relationship between tenure and churn rate. Visualized through a bar chart, it shows that active customers generally have higher tenure.
+    * How does monthly charges correlate with the churn rate?
+        * For the correlation between monthly charges and churn rate, a similar approach with a Mann-Whitney test suggests a relationship. The bar chart visualization reveals that active customers tend to have lower monthly charges.
+    * What impact does contract type have on the churn rate?
+        * Exploring the impact of contract type on churn rate, a chi^2 test indicates a relationship. Illustrated through a pie chart, customers with month-to-month contracts show a significantly higher churn rate compared to those with longer-term contracts.
+
+Confirmed influences of tenure, monthly charges, and contract types on customer churn will guide predictive model development.
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
 * **Preprocessing**
 * **Model**
 * **Evaluation**
